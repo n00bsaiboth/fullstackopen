@@ -4,10 +4,9 @@
   "description": "production version of the fullstackopen course",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
     "test": "",
-    "build": "webpack",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [
     "backend",
