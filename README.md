@@ -8,5 +8,5 @@ This is based on this [fullstack tutorial](https://fullstackopen.com), but it co
 
 ## Source code and demo
 
--[fullstackopen - source code](https://github.com/n00bsaiboth/fullstackopen)
--[fullstackopen - demo](https://develop.openinnovations.io)
+- [fullstackopen - source code](https://github.com/n00bsaiboth/fullstackopen)
+- [fullstackopen - demo](https://develop.openinnovations.io)
