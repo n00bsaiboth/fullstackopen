@@ -7,9 +7,12 @@ const app = express()
 
 const cors = require('cors')
 
-const employeessRouter = require('./controllers/employees')
+const employeesRouter = require('./controllers/employees')
+const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
 
 const mongoose = require('mongoose')
+const { applyDefaults } = require('./models/employees')
 mongoose.set('strictQuery', false)
 
 logger.info('connecting to, ', config.url)
@@ -28,7 +31,9 @@ app.use(express.json())
 
 app.use(middleware.requestLogger)
 
-app.use('/', employeessRouter);
+app.use('/', employeesRouter)
+app.use('/', usersRouter)
+app.use('/', loginRouter)
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)

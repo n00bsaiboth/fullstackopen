@@ -1,12 +1,14 @@
 {
   "name": "backend",
   "version": "0.0.1",
-  "description": "production version of the fullstackopen course",
+  "description": "backend of the fullstackopen course",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "start": "node index.js",
     "dev": "nodemon index.js",
-    "start": "node index.js"
+    "test": "",
+    "build": "webpack",
+    "prod": "node ./be-production/final.js"
   },
   "keywords": [
     "backend",
@@ -16,9 +18,11 @@
   "author": "Jussi Jokinen",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.0"
   },
   "devDependencies": {
