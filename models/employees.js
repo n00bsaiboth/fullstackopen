@@ -5,6 +5,11 @@ const employeesSchema = new mongoose.Schema({
 	address: String,
 	phone_number: String,
 	email_address: String,
+
+	user: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User'
+	}
 })
 
 employeesSchema.set('toJSON', {

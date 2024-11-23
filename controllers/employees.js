@@ -12,7 +12,7 @@ employeesRouter.get('/api/employees', (request, response) => {
 			logger.info(employees)
 			response.json(employees)
 		})
-		.catch(error => next(error))
+
 })
 
 employeesRouter.get('/api/employees/:id', (request, response, next) => {
@@ -29,7 +29,7 @@ employeesRouter.get('/api/employees/:id', (request, response, next) => {
 				logger.error('could not find an employee or user with that ID.')
 			}
 		})
-		.catch(error => next(error))
+
 })
 
 employeesRouter.put('/api/employees/:id', (request, response, next) => {
@@ -46,7 +46,7 @@ employeesRouter.put('/api/employees/:id', (request, response, next) => {
 		.then(temporaryEmployee => {
 			response.json(temporaryEmployee)
 		})
-		.catch(error => next(error))
+
 })
 
 employeesRouter.delete('/api/employees/:id', (request, response, next) => {
@@ -54,7 +54,7 @@ employeesRouter.delete('/api/employees/:id', (request, response, next) => {
 		.then(result => {
 			response.status(204).end()
 		})
-		.catch(error => next(error))
+
 })
 
 employeesRouter.post('/api/employees', (request, response) => {
@@ -80,7 +80,6 @@ employeesRouter.post('/api/employees', (request, response) => {
 			console.log(temporaryEmployee)
 			response.json(temporaryEmployee)
 		})
-		.catch(error => next(error))
 })
 
 module.exports = employeesRouter
